@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 # This directory is for test classes
 # Create your test classes here extending BaseTest
 
+=======
+# This directory is for test classes
+# Create your test classes here extending BaseTest
+
+>>>>>>> 9f310f5 (Add file upload test with BDD/Cucumber support)

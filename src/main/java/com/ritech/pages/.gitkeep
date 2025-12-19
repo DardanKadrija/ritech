@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 # This directory is for page objects
 # Create your page classes here extending BasePage
 
+=======
+# This directory is for page objects
+# Create your page classes here extending BasePage
+
+>>>>>>> 9f310f5 (Add file upload test with BDD/Cucumber support)
