@@ -1,0 +1,3 @@
+# This directory is for page objects
+# Create your page classes here extending BasePage
+
