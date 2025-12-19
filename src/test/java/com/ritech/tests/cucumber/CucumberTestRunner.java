@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
         "junit:target/cucumber-reports/Cucumber.xml"
     },
     monochrome = true,
-    tags = "@FileUpload or @DragAndDrop or @JavaScriptAlerts or @Windows or not @ignore"
+    tags = "@FileUpload or @DragAndDrop or @JavaScriptAlerts or @Windows or @Hovers or not @ignore"
 )
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 }
