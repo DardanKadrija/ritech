@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Selenium UI Automation Suite" parallel="tests" thread-count="2">
-    <!-- Add your test classes here -->
-    <!-- Example:
-    <test name="Your Test Suite">
-        <classes>
-            <class name="com.ritech.tests.YourTestClass"/>
-        </classes>
-    </test>
-    -->
-</suite>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Selenium UI Automation Suite" parallel="tests" thread-count="2">
@@ -29,4 +15,3 @@
         </classes>
     </test>
 </suite>
->>>>>>> 9f310f5 (Add file upload test with BDD/Cucumber support)
