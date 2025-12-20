@@ -519,22 +519,3 @@ public class NewPage extends BasePage {
 3. Add test methods with `@Test` annotation
 4. Update `testng.xml` to include the new test
 
-## 🤝 Contributing
-
-1. Create a feature branch
-2. Make your changes
-3. Write/update tests
-4. Ensure all tests pass
-5. Submit a pull request
-
-## 📄 License
-
-[Add your license information here]
-
-## 👥 Authors
-
-[Add author information here]
-
----
-
-**Happy Testing! 🎉**
