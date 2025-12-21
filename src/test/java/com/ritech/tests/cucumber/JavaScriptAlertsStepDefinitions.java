@@ -1,9 +1,6 @@
 package com.ritech.tests.cucumber;
 
 import com.ritech.pages.JavaScriptAlertsPage;
-import com.ritech.utils.DriverManager;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,19 +12,9 @@ import org.testng.Assert;
 public class JavaScriptAlertsStepDefinitions {
     private JavaScriptAlertsPage javaScriptAlertsPage;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        javaScriptAlertsPage = new JavaScriptAlertsPage();
-    }
-
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
-    }
-
     @Given("I navigate to the JavaScript alerts page")
     public void i_navigate_to_the_javascript_alerts_page() {
+        javaScriptAlertsPage = new JavaScriptAlertsPage();
         javaScriptAlertsPage.navigateToAlertsPage();
     }
 

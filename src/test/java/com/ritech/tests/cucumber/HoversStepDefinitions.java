@@ -1,9 +1,6 @@
 package com.ritech.tests.cucumber;
 
 import com.ritech.pages.HoversPage;
-import com.ritech.utils.DriverManager;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,19 +12,9 @@ import org.testng.Assert;
 public class HoversStepDefinitions {
     private HoversPage hoversPage;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        hoversPage = new HoversPage();
-    }
-
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
-    }
-
     @Given("I navigate to the hovers page")
     public void i_navigate_to_the_hovers_page() {
+        hoversPage = new HoversPage();
         hoversPage.navigateToHoversPage();
     }
 

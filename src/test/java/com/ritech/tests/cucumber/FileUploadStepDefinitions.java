@@ -1,9 +1,7 @@
 package com.ritech.tests.cucumber;
 
 import com.ritech.pages.FileUploadPage;
-import com.ritech.utils.DriverManager;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,14 +20,8 @@ public class FileUploadStepDefinitions {
     private Path testFile;
     private String uploadedFileName;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        fileUploadPage = new FileUploadPage();
-    }
-
     @After
-    public void tearDown() {
+    public void cleanUpTestFile() {
         // Clean up: delete the temporary file
         if (testFile != null) {
             try {
@@ -38,11 +30,11 @@ public class FileUploadStepDefinitions {
                 e.printStackTrace();
             }
         }
-        DriverManager.quitDriver();
     }
 
     @Given("I navigate to the file upload page")
     public void i_navigate_to_the_file_upload_page() {
+        fileUploadPage = new FileUploadPage();
         fileUploadPage.navigateToUploadPage();
     }
 

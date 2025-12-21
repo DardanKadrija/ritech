@@ -3,7 +3,6 @@ package com.ritech.tests.cucumber;
 import com.ritech.pages.WindowsPage;
 import com.ritech.utils.DriverManager;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,27 +16,21 @@ public class WindowsStepDefinitions {
     private WindowsPage windowsPage;
     private String originalWindowHandle;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        windowsPage = new WindowsPage();
-    }
-
     @After
-    public void tearDown() {
+    public void switchBackToOriginalWindow() {
         // Switch back to original window before closing
-        if (originalWindowHandle != null) {
+        if (originalWindowHandle != null && windowsPage != null) {
             try {
                 windowsPage.switchToWindow(originalWindowHandle);
             } catch (Exception e) {
                 // If original window is already closed, continue
             }
         }
-        DriverManager.quitDriver();
     }
 
     @Given("I navigate to the windows page")
     public void i_navigate_to_the_windows_page() {
+        windowsPage = new WindowsPage();
         windowsPage.navigateToWindowsPage();
     }
 

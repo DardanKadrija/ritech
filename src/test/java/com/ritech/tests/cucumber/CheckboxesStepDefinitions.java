@@ -1,9 +1,6 @@
 package com.ritech.tests.cucumber;
 
 import com.ritech.pages.CheckboxesPage;
-import com.ritech.utils.DriverManager;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,19 +12,9 @@ import org.testng.Assert;
 public class CheckboxesStepDefinitions {
     private CheckboxesPage checkboxesPage;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        checkboxesPage = new CheckboxesPage();
-    }
-
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
-    }
-
     @Given("I navigate to the checkboxes page")
     public void i_navigate_to_the_checkboxes_page() {
+        checkboxesPage = new CheckboxesPage();
         checkboxesPage.navigateToCheckboxesPage();
     }
 

@@ -1,9 +1,6 @@
 package com.ritech.tests.cucumber;
 
 import com.ritech.pages.DragAndDropPage;
-import com.ritech.utils.DriverManager;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,19 +14,9 @@ public class DragAndDropStepDefinitions {
     private String initialColumnAText;
     private String initialColumnBText;
 
-    @Before
-    public void setUp() {
-        DriverManager.initializeDriver();
-        dragAndDropPage = new DragAndDropPage();
-    }
-
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
-    }
-
     @Given("I navigate to the drag and drop page")
     public void i_navigate_to_the_drag_and_drop_page() {
+        dragAndDropPage = new DragAndDropPage();
         dragAndDropPage.navigateToDragAndDropPage();
         // Store initial positions
         initialColumnAText = dragAndDropPage.getColumnAText();

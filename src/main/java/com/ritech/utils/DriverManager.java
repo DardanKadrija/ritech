@@ -69,6 +69,13 @@ public class DriverManager {
     }
 
     /**
+     * Check if driver is already initialized
+     */
+    public static boolean isDriverInitialized() {
+        return driver.get() != null;
+    }
+
+    /**
      * Get the current WebDriver instance
      */
     public static WebDriver getDriver() {
